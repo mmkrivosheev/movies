@@ -1,0 +1,21 @@
+@import './reset.scss';
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 1.15;
+  color: #000;
+  background-color: #909db0;
+}
+
+body {
+  position: relative;
+  max-width: 930px;
+  min-height: 1000px;
+  margin: 5px auto;
+  border-radius: 3px 3px 3px 3px;
+  background-color: #fff;
+
+}
+
+

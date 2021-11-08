@@ -1,0 +1,32 @@
+.nav-bar {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0 15px;
+  border-radius: 3px 3px 0 0;
+  background-color: #445979;
+}
+
+.nav-bar__links {
+  margin-left: auto;
+}
+
+.nav-bar__links a {
+  margin: 0 10px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+.nav-link.active {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}

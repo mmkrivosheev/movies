@@ -1,7 +1,7 @@
 {
-  "name": "Films",
+  "name": "Movies",
   "version": "1.0.0",
-  "description": "Films by OMDb",
+  "description": "Movies by React",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --mode=development",
@@ -39,7 +39,6 @@
     "axios": "^0.22.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router": "^6.0.1",
     "react-router-dom": "^5.3.0"
   },
   "postcss": {
