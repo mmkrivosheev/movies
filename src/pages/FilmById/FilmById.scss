@@ -1,0 +1,84 @@
+.film-more__title {
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  padding: 0 15px;
+  background-color: #e5e6e8;
+}
+
+.film-more__more {
+  display: flex;
+  margin: 10px;
+}
+
+.film-more__poster img {
+  width: 300px;
+  height: 450px;
+  border-radius: 5px;
+  outline: 1px solid #ced4da;
+  object-fit: cover;
+}
+
+.film-more__description {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 0 20px;
+}
+
+.film-more__description Button{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.film-more__description div {
+  margin-bottom: 10px;
+}
+
+.film-more__description div:nth-child(2) {
+  font-size: 19px;
+  font-weight: 800;
+  color: #000;
+  margin-right: 100px;
+}
+
+.film-more__description div:first-child {
+  color: #778899;
+  margin-top: 20px;
+}
+
+.film-more__description div:last-child  {
+  display: flex;
+  align-items: center;
+}
+
+.film-more__description div:last-child span:last-child {
+  font-size: 19px;
+  color:  #5c687e;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 40px;
+}
+
+.film-more__description div:last-child span:last-child::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 33px;
+  width: 64px;
+  height: 32px;
+  background-image: url("../../images/icon-imdb.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: translate(0, -50%);
+}
+
+.film-more__description div span:first-child {
+  margin-right: 8px;
+  color: #778899;
+}
