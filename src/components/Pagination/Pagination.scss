@@ -1,0 +1,12 @@
+.page {
+  padding: 5px 8px;
+  margin: 5px;
+  cursor: pointer;
+  background-color: #BDC1C9;
+  border-radius: 2px;
+}
+
+.page__current {
+  font-weight: bold;
+  background-color: #d16171;
+}

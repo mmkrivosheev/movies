@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Movies from '../../API/Movies';
 import {useFetching} from '../../hooks/useFetching';
+import Pagination from '../../components/Pagination/Pagination';
 import FilmList from '../../components/FilmList/FilmList';
 import Loader from '../../components/UI/Loader/Loader';
 import Footer from '../../components/Footer/Footer';
@@ -52,6 +53,13 @@ const Films = () => {
                         films={films}
                         title="Вы в разделе: Фильмы"
                     />
+                    <div className="films__pagination">
+                        <Pagination
+                            page={page}
+                            changePage={changePage}
+                            totalPages={totalPages}
+                        />
+                    </div>
                     <Footer />
                 </div>
             }
