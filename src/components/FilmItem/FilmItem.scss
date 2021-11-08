@@ -1,0 +1,39 @@
+.film {
+  min-height: 100%;
+  margin: 5px 5px;
+  padding-bottom: 15px;
+}
+
+.film__poster img {
+  width: 200px;
+  height: 300px;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: 1px solid #ced4da;
+  object-fit: cover;
+}
+
+.film__poster img:hover {
+ opacity: 0.8;
+}
+
+.film__description {
+  width: 200px;
+  padding: 0 5px;
+}
+
+.film__description strong {
+  color: #2a5cad;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.film__description strong:hover{
+  opacity: 0.8;
+}
+
+.film__description span {
+  color: #778899;
+  margin-left: 8px;
+}
+
