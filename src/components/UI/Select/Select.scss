@@ -1,0 +1,17 @@
+.select {
+  font-weight: 500;
+  color: #778899;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+  padding: 3px 3px;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+  outline: none;
+  background-color: #fff;
+  background-image: url('../../../images/sort-down.svg');
+  background-repeat: no-repeat;
+  background-position: bottom 100% right 6px;
+  background-size: 12px auto;
+  appearance: none;
+}
