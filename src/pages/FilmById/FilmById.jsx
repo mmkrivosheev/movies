@@ -23,14 +23,14 @@ const FilmById = () => {
         fetchFilmId(params.id);
     }, []);
 
-    if(filmError) {
-        return (
-            <div className="error">
-                <h1>Произошла ошибка ${filmError}</h1>
-                <Footer />
-            </div>
-        );
-    }
+    // if(filmError) {
+    //     return (
+    //         <div className="error">
+    //             <h1>Произошла ошибка ${filmError}</h1>
+    //             <Footer />
+    //         </div>
+    //     );
+    // }
 
     return (
         <div>

@@ -32,18 +32,17 @@ const Films = () => {
         setPage(page);
     };
 
-    if(filmsError) {
-        return (
-            <div className="error">
-                <h1>Произошла ошибка ${filmsError}</h1>
-                <Footer />
-            </div>
-        );
-    }
+    // if(filmsError) {
+    //     return (
+    //         <div className="error">
+    //             <h1>Произошла ошибка ${filmsError}</h1>
+    //             <Footer />
+    //         </div>
+    //     );
+    // }
 
     return (
         <div className="films">
-            {filmsError && <h1>Произошла ошибка ${filmsError}</h1>}
             {isFilmsLoading
                 ? <Loader />
                 : <div>

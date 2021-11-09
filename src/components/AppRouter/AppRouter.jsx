@@ -23,7 +23,7 @@ const AppRouter = () => {
                         exact={route.exact}
                     />
                 )}
-                <Redirect to="/films" />
+                <Redirect to="/" />
             </Switch>
             :
             <Switch>
@@ -35,7 +35,7 @@ const AppRouter = () => {
                         exact={route.exact}
                     />
                 )}
-                <Redirect to="/login" />
+                <Redirect to="/" />
             </Switch>
     );
 };

@@ -1,15 +1,15 @@
 import React from 'react';
-import './About.scss'
 import Footer from "../../components/Footer/Footer";
+import './Main.scss';
 
-const About = () => {
+const Main = () => {
 
     return (
-        <div className="about">
-            <div className="about__title">
-                <h1>Вы в разделе: О сайте</h1>
+        <div className="main">
+            <div className="main__title">
+                <h1>Вы в разделе: Главная</h1>
             </div>
-            <div className="about__body">
+            <div className="main__body">
                 <p>Эта страница в разработке</p>
             </div>
             <Footer />
@@ -17,4 +17,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default Main;

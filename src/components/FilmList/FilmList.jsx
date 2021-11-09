@@ -6,10 +6,6 @@ import './FilmList.scss'
 const FilmList = ({films, title, limit, setLimit}) => {
     window.scrollTo(0, 0);
 
-    if(!films.length) {
-        return <h1>Посты не найдены!</h1>
-    }
-
     return (
         <div className="films-list">
             <div className="films-list__title">

@@ -21,7 +21,7 @@ const App = () => {
             setIsAuth,
             isLoading
         }}>
-            <BrowserRouter>
+            <BrowserRouter basename="/movies">
                 <NavBar />
                 <AppRouter />
             </BrowserRouter>

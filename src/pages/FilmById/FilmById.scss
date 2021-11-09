@@ -55,12 +55,10 @@
 }
 
 .film-more__description div:last-child span:last-child {
-  font-size: 19px;
-  color:  #5c687e;
   display: flex;
   align-items: center;
   position: relative;
-  height: 40px;
+  height: 25px;
 }
 
 .film-more__description div:last-child span:last-child::before {
@@ -68,7 +66,7 @@
   position: absolute;
   display: inline-block;
   top: 50%;
-  left: 33px;
+  left: 30px;
   width: 64px;
   height: 32px;
   background-image: url("../../images/icon-imdb.png");

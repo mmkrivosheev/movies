@@ -25,6 +25,7 @@ const NavBar = () => {
                 : null
             }
             <div className="nav-bar__links">
+                <NavLink className="nav-link" exact to="/">Главная</NavLink>
                 <NavLink className="nav-link" to="/about">О сайте</NavLink>
                 {isAuth
                     ? <NavLink className="nav-link" to="/films">Фильмы</NavLink>
