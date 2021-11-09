@@ -1,7 +1,0 @@
-{
- "root": "https://mmkrivosheev.github.io/movies/",
- "clean_urls": false,
- "routes": {
-   "/**": "index.html"
- }
-}
