@@ -8,20 +8,24 @@ import Footer from '../../components/Footer/Footer';
 import './Films.scss';
 
 const Films = () => {
-    const totalPages = 10;
+    // const totalPages = 30;
     const [films, setFilms] = useState([]);
     const [limit, setLimit] = useState(2);
     const [page, setPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(0);
 
     const [fetchFilms, isFilmsLoading, filmsError] = useFetching(async (page) => {
         const filmsLimit = [];
+        let totalResults;
 
         for(let i = 0; i < limit; i++) {
             const response = await Movies.getAll(page + i);
             filmsLimit.push(...response.data.Search);
+            totalResults = response.data.totalResults;
         }
 
         setFilms(filmsLimit);
+        setTotalPages(Math.ceil(totalResults / limit));
     });
 
     useEffect(() => {
