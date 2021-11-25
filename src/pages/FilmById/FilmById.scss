@@ -40,7 +40,7 @@
 .film-more__description div:nth-child(2) {
   font-size: 19px;
   font-weight: 800;
-  color: #000;
+  color: #6680aa;
   margin-right: 100px;
 }
 
@@ -52,28 +52,6 @@
 .film-more__description div:last-child  {
   display: flex;
   align-items: center;
-}
-
-.film-more__description div:last-child span:last-child {
-  display: flex;
-  align-items: center;
-  position: relative;
-  height: 25px;
-}
-
-.film-more__description div:last-child span:last-child::before {
-  content: '';
-  position: absolute;
-  display: inline-block;
-  top: 50%;
-  left: 30px;
-  width: 64px;
-  height: 32px;
-  background-image: url("../../images/icon-imdb.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  transform: translate(0, -50%);
 }
 
 .film-more__description div span:first-child {

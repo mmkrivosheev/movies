@@ -32,15 +32,6 @@ const Films = () => {
         setPage(page);
     };
 
-    // if(filmsError) {
-    //     return (
-    //         <div className="error">
-    //             <h1>Произошла ошибка ${filmsError}</h1>
-    //             <Footer />
-    //         </div>
-    //     );
-    // }
-
     return (
         <div className="films">
             {isFilmsLoading

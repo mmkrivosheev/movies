@@ -22,15 +22,6 @@ const FilmById = () => {
         fetchFilmId(params.id);
     }, []);
 
-    // if(filmError) {
-    //     return (
-    //         <div className="error">
-    //             <h1>Произошла ошибка ${filmError}</h1>
-    //             <Footer />
-    //         </div>
-    //     );
-    // }
-
     return (
         <div>
             {isLoading
@@ -75,7 +66,7 @@ const FilmById = () => {
                                     <span>{filmById.Runtime}</span>
                                 </div>
                                 <div>
-                                    <span>Рейтинг:</span>
+                                    <span>Рейтинг IMDb:</span>
                                     <span>{filmById.imdbRating}</span>
                                 </div>
 
