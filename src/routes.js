@@ -1,4 +1,3 @@
-import Main from "./pages/Main/Main";
 import Login from "./pages/Login/Login";
 import About from "./pages/About/About";
 import Films from "./pages/Films/Films";

@@ -12,14 +12,13 @@ const FilmById = () => {
     const params = useParams();
     const [filmById, setFilmById] = useState({});
 
-    window.scrollTo(0, 0);
-
     const [fetchFilmId, isLoading, filmError] = useFetching(async (id) => {
         const response = await Movies.getById(id);
         setFilmById(response.data);
     });
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         fetchFilmId(params.id);
     }, []);
 
