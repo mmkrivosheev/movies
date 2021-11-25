@@ -7,10 +7,23 @@
 }
 
 .page:hover {
-  background-color: #a1a3aa;
+  background-color: #9198A8;
+}
+
+.page.end:hover {
+  background-color: #BDC1C9;
+}
+
+.page.dots {
+  background-color: #BDC1C9;
 }
 
 .page__current {
+  font-weight: bold;
+  background-color: #d16171;
+}
+
+.page__current:hover {
   font-weight: bold;
   background-color: #d16171;
 }

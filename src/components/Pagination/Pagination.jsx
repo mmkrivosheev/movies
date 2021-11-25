@@ -3,7 +3,7 @@ import './Pagination.scss'
 
 const Pagination = ({totalPages, page, changePage}) => {
     let pagesArray = [];
-    let totalPagesShow = 11;
+    let totalPagesShow = 7;
 
     for (let i = 0; i < totalPages; i++) {
         pagesArray.push(i + 1);
@@ -21,7 +21,7 @@ const Pagination = ({totalPages, page, changePage}) => {
     return (
         <div className="page__wrapper">
             <span
-                className="page"
+                className={page === 1 ? "page end": "page"}
                 onClick={page === 1
                     ? null
                     : () => changePage(page - 1)
@@ -29,6 +29,18 @@ const Pagination = ({totalPages, page, changePage}) => {
             >
                 Prev
             </span>
+            {pagesArraySlice(pagesArray).includes(1)
+                ? null
+                : <>
+                    <span
+                        className="page"
+                        onClick={() => changePage(1)}
+                    >
+                    1
+                    </span>
+                    <span className="page dots">...</span>
+                </>
+            }
             {pagesArraySlice(pagesArray).map(p =>
                  <span
                     key={p}
@@ -41,7 +53,7 @@ const Pagination = ({totalPages, page, changePage}) => {
             {pagesArraySlice(pagesArray).includes(totalPages)
                 ? null
                 : <>
-                    <span className="page">...</span>
+                    <span className="page dots">...</span>
                     <span
                     className="page"
                     onClick={() => changePage(totalPages)}
@@ -51,7 +63,7 @@ const Pagination = ({totalPages, page, changePage}) => {
                 </>
             }
             <span
-                className="page"
+                className={page === totalPages ? "page end": "page"}
                 onClick={page === totalPages
                     ? null :
                     () => changePage(page + 1)
