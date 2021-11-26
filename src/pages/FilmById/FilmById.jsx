@@ -5,12 +5,14 @@ import Movies from '../../API/Movies';
 import Loader from '../../components/UI/Loader/Loader';
 import Button from '../../components/UI/Button/Button';
 import Footer from "../../components/Footer/Footer";
+import Modal from "../../components/Modal/Modal";
 import './FilmById.scss'
 
 const FilmById = () => {
     const history = useHistory();
     const params = useParams();
     const [filmById, setFilmById] = useState({});
+    const [isModal, setIsModal] = useState(false);
 
     const [fetchFilmId, isLoading, filmError] = useFetching(async (id) => {
         const response = await Movies.getById(id);
@@ -24,6 +26,12 @@ const FilmById = () => {
 
     return (
         <div>
+            <Modal
+                visible={isModal}
+                setVisible={setIsModal}
+            >
+                <img src={filmById.Poster} alt="Постер к фильму"/>
+            </Modal>
             {isLoading
                 ? <Loader />
                 : <div className="film-more">
@@ -31,7 +39,10 @@ const FilmById = () => {
                         <h1>Вы в разделе: Описание фильма</h1>
                     </div>
                         <div className="film-more__more">
-                            <div className="film-more__poster">
+                            <div
+                                className="film-more__poster"
+                                onClick={() => setIsModal(true)}
+                            >
                                 <img src={filmById.Poster} alt="Постер к фильму"/>
                             </div>
                             <div className="film-more__description">

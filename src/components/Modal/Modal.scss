@@ -1,0 +1,26 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  background: rgba(0,0,0, 0.6);
+  z-index: 100;
+}
+
+.modal-content {
+  height: 80vh;
+}
+
+.modal-content img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -16,9 +16,13 @@
 .film-more__poster img {
   width: 300px;
   height: 450px;
+  cursor: pointer;
   border-radius: 5px;
   outline: 1px solid #ced4da;
   object-fit: cover;
+}
+.film-more__poster img:hover {
+  opacity: 0.9;
 }
 
 .film-more__description {
