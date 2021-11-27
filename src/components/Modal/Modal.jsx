@@ -1,18 +1,19 @@
 import React from 'react';
 import './Modal.scss';
 
-const Show = ({children, visible, setVisible}) => {
+const Modal = ({visible, setVisible, children}) => {
 
     return (
         <div
-            className={visible ? 'modal active' : 'modal'}
+            className={visible ? 'modal active ' : 'modal'}
             onClick={() => setVisible(false)}
         >
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className={visible ? 'modal-content active' : 'modal-content'}
+                 onClick={(e) => e.stopPropagation()}>
             {children}
             </div>
         </div>
     );
 };
 
-export default Show;
+export default Modal;
