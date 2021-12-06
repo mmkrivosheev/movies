@@ -19,6 +19,11 @@ const FilmById = () => {
         setFilmById(response.data);
     });
 
+    function clickHandler() {
+        document.body.classList.add("lock");
+        setIsModal(true);
+    }
+
     useEffect(() => {
         window.scrollTo(0, 0);
         fetchFilmId(params.id);
@@ -41,7 +46,7 @@ const FilmById = () => {
                         <div className="film-more__more">
                             <div
                                 className="film-more__poster"
-                                onClick={() => setIsModal(true)}
+                                onClick={clickHandler}
                             >
                                 <img src={filmById.Poster} alt="Постер к фильму"/>
                             </div>

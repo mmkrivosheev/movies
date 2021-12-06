@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import FilmItem from '../FilmItem/FilmItem';
 import Select from '../UI/Select/Select';
 import './FilmList.scss'
 
 const FilmList = ({films, title, limit, setLimit}) => {
-    window.scrollTo(0, 0);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className="films-list">

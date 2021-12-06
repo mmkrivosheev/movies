@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './Pagination.scss'
 
 const Pagination = ({totalPages, page, changePage}) => {
+    const mediaQuery = window.matchMedia('(max-width: 480px)');
+    const [matches, setMatches] = useState(mediaQuery.matches);
+    const totalPagesShow = matches ? 4 : 7;
     let pagesArray = [];
-    let totalPagesShow = 7;
 
     for (let i = 0; i < totalPages; i++) {
         pagesArray.push(i + 1);
@@ -18,6 +20,18 @@ const Pagination = ({totalPages, page, changePage}) => {
         return pagesArray.slice(page - totalPagesShow / 2, page + totalPagesShow / 2);
     }
 
+    function handleTabletChange(e) {
+            setMatches(e.matches);
+    }
+
+    useEffect(() => {
+        mediaQuery.addEventListener('change', handleTabletChange);
+        return () => {
+            mediaQuery.removeEventListener('change', handleTabletChange);
+        }
+    });
+
+
     return (
         <div className="page__wrapper">
             <span
@@ -27,7 +41,7 @@ const Pagination = ({totalPages, page, changePage}) => {
                     : () => changePage(page - 1)
                 }
             >
-                Prev
+                &#60;
             </span>
             {pagesArraySlice(pagesArray).includes(1)
                 ? null
@@ -69,7 +83,7 @@ const Pagination = ({totalPages, page, changePage}) => {
                     () => changePage(page + 1)
                 }
             >
-                Next
+                &#62;
             </span>
         </div>
     );

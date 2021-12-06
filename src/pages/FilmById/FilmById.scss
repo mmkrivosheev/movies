@@ -10,16 +10,24 @@
 
 .film-more__more {
   display: flex;
-  margin: 10px;
+  padding-bottom: 60px;
+  margin: 10px 10px 0 10px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.film-more__poster {
+  width: 90%;
 }
 
 .film-more__poster img {
-  width: 300px;
-  height: 450px;
+  width: 100%;
   cursor: pointer;
   border-radius: 5px;
-  outline: 1px solid #ced4da;
   object-fit: cover;
+
 }
 .film-more__poster img:hover {
   opacity: 0.9;
@@ -29,12 +37,18 @@
   position: relative;
   flex: 1 1 auto;
   padding: 0 20px;
+  @media (max-width: 768px) {
+    padding: 20px 0;
+  }
 }
 
 .film-more__description Button{
   position: absolute;
   top: 0;
   right: 0;
+  @media (max-width: 768px) {
+    top: 20px;
+  }
 }
 
 .film-more__description div {
