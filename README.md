@@ -2,7 +2,7 @@
 Ссылка на GitHub Pages: https://mmkrivosheev.github.io/movies
 
 КАКИЕ ТЕХНОЛОГИИ ПРИМЕНИЛ?<br>
-&#x2022; Приложение написано на React (на функциональных компонентах с использованием хуков useState, useEffect, useContext). В ближайшее время перепишу на Redux.<br>
+&#x2022; Приложение написано на React (на функциональных компонентах с использованием хуков useState, useEffect, useContext).<br>
 &#x2022; React Router DOM для маршрутизации (использовал хуки useHistory, useParams).<br>
 &#x2022; Axios для доступа к API.<br>
 &#x2022; Отзывчивая верстка (использовал Flex, медиа-запросы на CSS, медиа-запросы на JavaScript).<br>
